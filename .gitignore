@@ -3,7 +3,6 @@
 *.tar
 *.tfrecord
 /checkpoints/*
-/serving/*
 /logs/
 /Untitled.ipynb
 /output.jpg
