@@ -15,7 +15,7 @@ python detect_from_model.py --tiny \
 python detect.py --tiny \
 --classes kitti.names \
 --num_classes 1 \
---weights ./model/final/yolov3_train_12.tf \
+--weights ./models/final/yolov3_train_12.tf \
 --image test.png \
 --tiny
 ```
@@ -26,7 +26,7 @@ python detect.py --tiny \
 python detect_video.py \
 --classes kitti.names \
 --num_classes 1 \
---weights ./results/final/yolov3_train_12.tf \
+--weights ./models/final/yolov3_train_12.tf \
 --video input.mp4 \
 --output output.mp4 \
 --tiny
