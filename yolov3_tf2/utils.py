@@ -21,6 +21,7 @@ YOLOV3_TINY_LAYER_LIST = [
     'yolo_output_1',
 ]
 
+IOU_THRESHOLD = 0.3
 
 def load_darknet_weights(model, weights_file, tiny=False):
     wf = open(weights_file, 'rb')
@@ -104,7 +105,7 @@ def draw_outputs(img, outputs, class_names):
     boxes, objectness, classes, nums = boxes[0], objectness[0], classes[0], nums[0]
     wh = np.flip(img.shape[0:2])
     for i in range(nums):
-        if (objectness[i] < 0.3):
+        if (objectness[i] < IOU_THRESHOLD):
             continue
         x1y1 = tuple((np.array(boxes[i][0:2]) * wh).astype(np.int32))
         x2y2 = tuple((np.array(boxes[i][2:4]) * wh).astype(np.int32))

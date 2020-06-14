@@ -8,8 +8,8 @@ import tensorflow as tf
 from yolov3_tf2.dataset import transform_images, load_tfrecord_dataset
 from yolov3_tf2.utils import draw_outputs
 
-flags.DEFINE_string('classes', './data/kitti_cars/kitti.names','path to classes file')
-flags.DEFINE_string('model', './checkpoints/result/', 'path to model')
+flags.DEFINE_string('classes', './kitti.names','path to classes file')
+flags.DEFINE_string('model', './serving/yolov3/1', 'path to model')
 flags.DEFINE_boolean('tiny', False, 'is a tiny model')
 flags.DEFINE_integer('size',416,'resize images to')
 flags.DEFINE_string('image', './data/girl.png', 'path to input image')
