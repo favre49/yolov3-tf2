@@ -41,3 +41,7 @@ python detect_video_from_model.py --tiny \
 --classes ./kitti.names \
 --output output.mp4
 ```
+
+## Changing IOU threshold
+
+See line 24 on yolov3_tf2/utils.py
