@@ -5,7 +5,7 @@
 ```
 python detect_from_model.py --tiny \
 --image test.png \
---model ./serving/yolov3/1
+--model ./serving/yolov3/1 \
 --classes ./kitti.names
 ```
 
